@@ -61,3 +61,10 @@ RSpec.configure do |config|
 end
 
 Shoulda::Matchers.congifure do |config|
+  configure.integrate do |with|
+    #Choose test framework
+    with.test_framework :rspec
+    # Or, choose the following (which implies all of the above):
+    with.library :rails
+  end
+end
