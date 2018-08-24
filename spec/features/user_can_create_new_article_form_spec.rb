@@ -14,6 +14,7 @@ describe 'user creates a new article' do
 
         click_on "Create Article"
 
+        expect(page).to have_content("Article Created!")
         expect(page).to have_content("New Title!")
         expect(page).to have_content("New Body!")
       end
